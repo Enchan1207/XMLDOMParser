@@ -7,11 +7,11 @@
 
 import Foundation
 
-class Comment: Node {
+public class Comment: Node {
     private (set) public var uuid: NSUUID = NSUUID()
-    var tagName: String = "#comment"
-    var parent: Node?
-    var children: [Node] = []
+    public var tagName: String = "#comment"
+    public var parent: Node?
+    public var children: [Node] = []
     var value: String
     
     public var description: String {

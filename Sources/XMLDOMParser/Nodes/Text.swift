@@ -7,11 +7,11 @@
 
 import Foundation
 
-class Text: Node {
+public class Text: Node {
     private (set) public var uuid: NSUUID = NSUUID()
-    var tagName: String = "#text"
-    var parent: Node?
-    var children: [Node] = []
+    public var tagName: String = "#text"
+    public var parent: Node?
+    public var children: [Node] = []
     var value: String
     
     public var description: String {

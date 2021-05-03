@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Node: CustomStringConvertible {
+public protocol Node: CustomStringConvertible {
     var uuid: NSUUID {get}
     
     var tagName: String { get }
@@ -19,7 +19,7 @@ protocol Node: CustomStringConvertible {
     mutating func removeChild(_ node: Node)
 }
 
-extension Node {
+public extension Node {
     
     mutating func appendChild(_ node: Node){
         var node = node

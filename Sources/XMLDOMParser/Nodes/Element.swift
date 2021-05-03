@@ -7,13 +7,13 @@
 
 import Foundation
 
-class Element: Node{
+public class Element: Node{
     private (set) public var uuid: NSUUID = NSUUID()
-    var tagName: String
+    public var tagName: String
     var attributes: [String: String]
     
-    var parent: Node?
-    var children: [Node]
+    public var parent: Node?
+    public var children: [Node]
     public var description: String {
         get{
             let representedAttributes: String
@@ -28,7 +28,7 @@ class Element: Node{
         }
     }
     
-    init(tagName: String, attributes: [String: String] = [:], children:[Node] = [], parent: Node? = nil){
+    public init(tagName: String, attributes: [String: String] = [:], children:[Node] = [], parent: Node? = nil){
         
         self.uuid = NSUUID()
         
@@ -40,7 +40,7 @@ class Element: Node{
 }
 
 // MARK: - search functions
-extension Element{
+public extension Element{
     
     ///
     func getElementBy(id: String) -> Element?{
